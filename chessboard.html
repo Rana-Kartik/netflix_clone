@@ -3,19 +3,17 @@
 <head>
 <style>
 #chessboard {
-   width: 100vw;
-   height: 100vw;
+   width: 100vh;
+   height: 100vh;
 }
 body{
    background-color: aqua;
    box-sizing: border-box;
 }
 .chess-square {
-   float: left;
-   width: 100px;
    border: 1px solid black;
-   height: 100px;
    background-color: #fff;
+   display: grid;
    grid-template-columns: repeat(8,auto);
    row-gap: 0;
    column-gap: 0;
@@ -32,6 +30,10 @@ body{
          chessSquare.className = 'chess-square';
          if ((i + j) % 2 == 0) {
             chessSquare.style.backgroundColor = '#000';
+         }
+         else
+         {
+            chessSquare.style.backgroundColor = 'white';
          }
          chessboard.appendChild(chessSquare);
       }
