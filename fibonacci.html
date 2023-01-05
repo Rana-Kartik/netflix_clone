@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        //creating function for fibonacci series 
+         function fibo(){
+            let a = document.getElementById("no").value;
+            var t1=0,t2=1;
+            var temp;
+            if(a == 0)//compare the value
+            {
+                alert("Enter the another number");
+            }
+            else if (a == 1)
+            {
+                document.write(a);
+            }
+            else if (a <0)
+            {
+                alert("Enter the positive number");
+            }
+           else
+           {
+            for(let i=1;i<=a;i++)
+            {
+                document.write(t2 +  ",");
+                temp = t1 + t2;
+                t1 = t2;
+                t2  = temp;
+            }
+          }
+         }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="no" ><br>
+   <button type="button" onclick="fibo()">Submit</button>
+</body>
+</html>
